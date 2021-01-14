@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'me.vukas'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'org.assertj:assertj-core:3.18.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    compile group: 'org.objenesis', name: 'objenesis', version: '1.2'
+
+    implementation 'io.protostuff:protostuff-core:1.7.2'
+    implementation 'io.protostuff:protostuff-runtime:1.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
